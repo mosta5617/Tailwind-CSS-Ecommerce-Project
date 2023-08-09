@@ -5,10 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind Ecommerce Project</title>
     <link rel="stylesheet" href="./output/tailwind.css">
+     <!-- Font Awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Open+Sans:wght@300;400;600;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container bg-blue-200 text-yellow-500">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt corrupti laboriosam architecto! Quo rerum neque, magni odio sint perspiciatis illo deserunt maiores nam fuga. Iste modi minima optio fugiat voluptate!
-    </div>
+    <!-- Start Header part-->
+    <header class="py-4 shadow-lg bg-pink-100 lg:bg-white">
+        <div class="container flex items-center justify-between">
+            <!-- logo -->
+                <a href="" class="block w-32">
+                    <img src="./images/logo.svg" alt="" class="w-full">
+                </a>
+            <!-- logo end -->
+            <!-- search   -->
+            <div class="w-full xl:max-w-xl lg:max-w-lg lg:flex relative hidden ">
+                <span class="absolute left-4 top-3 text-lg text-gray-400 ">
+                     <i class="fas fa-search"></i>
+                </span>
+                <input type="text" class="pl-12 w-full border border-r-0 border-primary  py-3 px-3 rounded-l-3xl focus:ring-primary " placeholder="Search" />
+                <button type="submit" class="bg-primary border border-primary text-white px-8 font-medium rounded-r-md hover:bg-transparent hover:text-primary transition  " >
+                     Search
+                </button>
+
+           </div>
+
+           <!-- search End  -->
+        </div>
+    </header>
+    <!-- End Header part-->
 </body>
 </html>
