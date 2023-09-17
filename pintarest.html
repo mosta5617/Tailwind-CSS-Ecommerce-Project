@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Ecommerce Project</title>
+    <link rel="stylesheet" href="./output/tailwind.css">
+     <!-- Font Awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Open+Sans:wght@300;400;600;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Style for the fixed navigation bar */
+        .fixed-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: pink-500; /* Set the background color */
+            z-index: 999;
+        }
+        /* Style for top margin when navigation bar is fixed */
+        .main-content-with-margin {
+            margin-top: 70px; /* Adjust this value as needed */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-semibold text-pink-500">
+                Pinterest
+            </div>
+           <div class="w-2/5 relative">
+                <input type="text" id="search-input" placeholder="Search" class="w-full py-2 px-4 rounded-full border border-gray-300 focus:outline-none focus:border-pink-500">
+                <button id="clear-search" class="absolute right-4 top-1/2 transform -translate-y-1/2 hidden">
+                    <i class="fas fa-times text-gray-400"></i>
+                </button>
+            </div>
+            <!-- Icons -->
+            <div class="flex space-x-4">
+                <a href="#" class="text-gray-600 hover:text-pink-500 transition duration-300">
+                    <i class="fas fa-bell"></i> <!-- Notification icon -->
+                </a>
+                <a href="#" class="text-gray-600 hover:text-pink-500 transition duration-300">
+                    <i class="fas fa-envelope"></i> <!-- Message icon -->
+                </a>
+                <a href="#" class="text-gray-600 hover:text-pink-500 transition duration-300">
+                    <i class="fas fa-user"></i> <!-- Profile icon -->
+                </a>
+                <!-- User Avatar -->
+                <div class="ml-4">
+                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-8 h-8 rounded-full">
+                </div>
+				 <!-- User Avatar -->
+                <div class="ml-4">
+                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-8 h-8 rounded-full">
+                </div>
+			
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-pink-500 text-white py-2.5">
+        <div class="container mx-auto flex justify-center space-x-6">
+            <a href="#" class="hover:underline">Home</a>
+            <a href="#" class="hover:underline">Category</a>
+            <a href="#" class="hover:underline">Blog</a>
+            <a href="#" class="hover:underline">Fruits</a>
+            <a href="#" class="hover:underline">Fish</a>
+            <a href="#" class="hover:underline">Meat</a>
+            <a href="#" class="hover:underline">Vegetables</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-8">
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+            <!-- Sample Pins (Replace with your own content) -->
+			<div class="bg-white shadow-md rounded-lg p-4 ">
+                <img src="https://via.placeholder.com/200" alt="Sample Photo" class="w-full rounded-lg transform transition-transform hover:scale-90">
+				<p class="mt-2 text-gray-700">Pin description lorem To use a negative scale value, prefix the class name with a dash to convert it to a negative value.</p>
+            </div>
+			<div class="bg-white shadow-md rounded-lg p-4">
+                <img src="https://via.placeholder.com/300x400" alt="Pin" class="w-full rounded-lg">
+                <p class="mt-2 text-gray-700">Pin description</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <img src="https://via.placeholder.com/300x400" alt="Pin" class="w-full rounded-lg">
+                <p class="mt-2 text-gray-700">Pin description</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <img src="https://via.placeholder.com/300x400" alt="Pin" class="w-full rounded-lg">
+                <p class="mt-2 text-gray-700">Pin description</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <img src="https://via.placeholder.com/300x400" alt="Pin" class="w-full rounded-lg">
+                <p class="mt-2 text-gray-700">Pin description</p>
+            </div>
+			<div class="bg-white shadow-md rounded-lg p-4">
+                <img src="https://via.placeholder.com/300x400" alt="Pin" class="w-full rounded-lg">
+                <p class="mt-2 text-gray-700">Pin description</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <img src="https://via.placeholder.com/300x400" alt="Pin" class="w-full rounded-lg">
+                <p class="mt-2 text-gray-700">Pin description</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <img src="https://via.placeholder.com/300x400" alt="Pin" class="w-full rounded-lg">
+                <p class="mt-2 text-gray-700">Pin description</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <img src="https://via.placeholder.com/300x400" alt="Pin" class="w-full rounded-lg">
+                <p class="mt-2 text-gray-700">Pin description</p>
+            </div>
+			<div class="bg-white shadow-md rounded-lg p-4">
+                <img src="https://via.placeholder.com/300x400" alt="Pin" class="w-full rounded-lg">
+                <p class="mt-2 text-gray-700">Pin description</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <img src="https://via.placeholder.com/300x400" alt="Pin" class="w-full rounded-lg">
+                <p class="mt-2 text-gray-700">Pin description</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <img src="https://via.placeholder.com/300x400" alt="Pin" class="w-full rounded-lg">
+                <p class="mt-2 text-gray-700">Pin description</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <img src="https://via.placeholder.com/300x400" alt="Pin" class="w-full rounded-lg">
+                <p class="mt-2 text-gray-700">Pin description</p>
+            </div>
+            <!-- ... -->
+        </div>
+    </main>
+
+    <script>
+        // JavaScript to toggle the fixed navigation bar on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const nav = document.querySelector('nav');
+            const mainContent = document.querySelector('.main-content-with-margin');
+
+            if (window.scrollY > header.offsetHeight) {
+                nav.classList.add('fixed-nav');
+                mainContent.classList.add('main-content-with-margin');
+            } else {
+                nav.classList.remove('fixed-nav');
+                mainContent.classList.remove('main-content-with-margin');
+            }
+        });
+    </script>
+	<script>
+        // JavaScript to toggle the clear button in the search input
+        const searchInput = document.getElementById('search-input');
+        const clearButton = document.getElementById('clear-search');
+
+        searchInput.addEventListener('input', () => {
+            if (searchInput.value.trim() === '') {
+                clearButton.classList.add('hidden');
+            } else {
+                clearButton.classList.remove('hidden');
+            }
+        });
+
+        clearButton.addEventListener('click', () => {
+            searchInput.value = '';
+            clearButton.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
