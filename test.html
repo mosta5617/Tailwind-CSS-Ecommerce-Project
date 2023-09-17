@@ -17,88 +17,83 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&display=swap" rel="stylesheet">
-
-    <style>
-        /* Style for the fixed header */
-        .fixed-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: pink-500; /* Set the background color */
-            z-index: 999;
-        }
-    
-        /* Style for top margin when header is fixed */
-        .main-content-with-margin {
-            margin-top: 70px; /* Adjust this value as needed */
-        }
-    </style>
-    
     
 </head>
 <body class="bg-gray-100">
-    <!-- Header -->
-    <header class="bg-pink-500 shadow-md p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo -->
-            <div class="text-3xl font-semibold text-white">
-                Pinterest
-            </div>
-           <div class="w-2/5 relative mx-auto">
-            <span class="absolute left-4 top-2 text-md text-gray-300 ">
-                <i class="fa fa-search"></i>
-           </span>
-                <input type="text" id="search-input" placeholder="Type & Hit Enter" class="w-full py-2 px-10 rounded-full border border-gray-300 focus:outline-none focus:border-pink-200 bg-gray-200 focus:bg-gray-100 text-gray-600">
 
-                <button id="clear-search" class="absolute right-4 top-1/2 transform -translate-y-1/2 hidden">
-                    <i class="fas fa-times text-gray-400"></i>
-                </button>
-            </div>
-            <!-- Icons -->
-            <div class="flex space-x-4">
-                <a href="#" class="text-gray-600 hover:text-pink-500 transition duration-300">
-                    <i class="fas fa-bell"></i> <!-- Notification icon -->
-                </a>
-                <a href="#" class="text-gray-600 hover:text-pink-500 transition duration-300">
-                    <i class="fas fa-envelope"></i> <!-- Message icon -->
-                </a>
-                <a href="#" class="text-gray-600 hover:text-pink-500 transition duration-300">
-                    <i class="fas fa-user"></i> <!-- Profile icon -->
-                </a>
-                <!-- User Avatar -->
-                <div class="ml-4">
-                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-8 h-8 rounded-full">
+    <div class="fixed top-0 inset-x-0 z-50">
+        <!-- Header -->
+        <header class="bg-pink-500 shadow-md p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- Logo -->
+                <div class="text-3xl font-semibold text-white">
+                    Pinterest
                 </div>
-				 <!-- User Avatar -->
-                <div class="ml-4">
-                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-8 h-8 rounded-full">
-                </div>
-			
-            </div>
-        </div>
-    </header>
+            <div class="w-2/5 relative mx-auto">
+                <span class="absolute left-4 top-2 text-md text-gray-300 ">
+                    <i class="fa fa-search"></i>
+            </span>
+                    <input type="text" id="search-input" placeholder="Type & Hit Enter" class="w-full py-2 px-10 rounded-full border border-gray-300 focus:outline-none focus:border-pink-200 bg-gray-200 focus:bg-gray-100 text-gray-600">
 
-    <!-- Navigation Bar -->
-    <nav class="bg-pink-200 text-pink-600  py-3">
-        <div class="container mx-auto flex justify-center font-semibold space-x-6">
-            <a href="#" class="hover:underline "><i class="fas fa-home"></i></a>
-            <a href="#" class="hover:underline ">Category</a>
-            <a href="#" class="hover:underline">Blog</a>
-            <a href="#" class="hover:underline">Fruits</a>
-            <a href="#" class="hover:underline">Fish</a>
-            <a href="#" class="hover:underline">Meat</a>
-            <a href="#" class="hover:underline">Vegetables</a>
-        </div>
-    </nav>
+                    <button id="clear-search" class="absolute right-4 top-1/2 transform -translate-y-1/2 hidden">
+                        <i class="fas fa-times text-gray-400"></i>
+                    </button>
+                </div>
+                <!-- Icons -->
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-pink-500 transition duration-300">
+                        <i class="fas fa-bell"></i> <!-- Notification icon -->
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-pink-500 transition duration-300">
+                        <i class="fas fa-envelope"></i> <!-- Message icon -->
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-pink-500 transition duration-300">
+                        <i class="fas fa-user"></i> <!-- Profile icon -->
+                    </a>
+                    <!-- User Avatar -->
+                    <div class="ml-4">
+                        <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-8 h-8 rounded-full">
+                    </div>
+                    <!-- User Avatar -->
+                    <div class="ml-4">
+                        <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-8 h-8 rounded-full">
+                    </div>
+                
+                </div>
+            </div>
+        </header>
+        <!-- Navigation Bar -->
+        <nav class="bg-pink-200 text-pink-600  py-3">
+            <div class="container mx-auto flex justify-center font-semibold space-x-6">
+                <a href="#" class="hover:underline "><i class="fas fa-home"></i></a>
+                <a href="#" class="hover:underline ">Category</a>
+                <a href="#" class="hover:underline">Blog</a>
+                <a href="#" class="hover:underline">Fruits</a>
+                <a href="#" class="hover:underline">Fish</a>
+                <a href="#" class="hover:underline">Meat</a>
+                <a href="#" class="hover:underline">Vegetables</a>
+            </div>
+        </nav>
+    </div>
 
     <!-- Main Content -->
-    <main class="container mx-auto py-8">
+    <main class="container mx-auto py-8 pt-40">
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
             <!-- Sample Pins (Replace with your own content) -->
-			<div class="bg-white shadow-md rounded-lg p-1">
-                <img src="https://via.placeholder.com/200" alt="Sample Photo" class="w-full rounded-sm transform transition-transform hover:scale-90">
-                <p class="mt-0 text-gray-700 text-center text-sm">Custard apple - <span class="font-bengali">সরিফা ফল </span></p>
+			<div class="bg-white shadow-md rounded-lg p-1 overflow-hidden">
+                <a href="#" class="block rounded-md overflow-hidden ">
+                    <img src="./images/1.jpg" class="w-full h-36 object-cover transform hover:scale-110 transition duration-500 "   />
+                  </a>
+               <div class="divide-y divide-blue-400">
+                <p class="mt-2 text-gray-700 text-center text-sm ">Custard apple Custard Custard- <span class="font-bengali">সরিফা ফল </span></p>
+               </div>
+                <div class="justify-between text-xs pt-4 gap-x-0 flex ">
+                   <p> <a href=""><i class="fa fa-b"></i> 1000</a>
+                   </p>
+                   <p> <a href=""><i class="fa fa-a"></i> 1000</a>
+                   </p>
+                </div>
+                <p class="pt-2 text-xs text-center"> <i class="fa fa-clock"></i> 30 min ago</p>
             </div>
 			<div class="bg-white shadow-md rounded-lg p-4">
                 <img src="https://via.placeholder.com/100x100" alt="Pin" class="w-full rounded-lg">
@@ -152,21 +147,7 @@
         </div>
     </main>
 
-    <script>
-        // JavaScript to toggle the fixed header on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            const mainContent = document.querySelector('main');
-    
-            if (window.scrollY > header.offsetHeight) {
-                header.classList.add('fixed-header'); // Add a class for the fixed header
-                mainContent.classList.add('main-content-with-margin');
-            } else {
-                header.classList.remove('fixed-header'); // Remove the class for the fixed header
-                mainContent.classList.remove('main-content-with-margin');
-            }
-        });
-    </script>
+
     
 
 	<script>
