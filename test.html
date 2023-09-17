@@ -13,9 +13,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Borel&family=Open+Sans:wght@300;400;600;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&display=swap" rel="stylesheet">
+
     <style>
-        /* Style for the fixed navigation bar */
-        .fixed-nav {
+        /* Style for the fixed header */
+        .fixed-header {
             position: fixed;
             top: 0;
             left: 0;
@@ -23,19 +28,21 @@
             background-color: pink-500; /* Set the background color */
             z-index: 999;
         }
-        /* Style for top margin when navigation bar is fixed */
+    
+        /* Style for top margin when header is fixed */
         .main-content-with-margin {
             margin-top: 70px; /* Adjust this value as needed */
         }
-    
     </style>
+    
+    
 </head>
 <body class="bg-gray-100">
     <!-- Header -->
-    <header class="bg-white shadow-md p-4">
+    <header class="bg-pink-500 shadow-md p-4">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo -->
-            <div class="text-3xl font-semibold text-pink-500">
+            <div class="text-3xl font-semibold text-white">
                 Pinterest
             </div>
            <div class="w-2/5 relative mx-auto">
@@ -73,10 +80,10 @@
     </header>
 
     <!-- Navigation Bar -->
-    <nav class="bg-pink-500 text-white py-4">
-        <div class="container mx-auto flex justify-center space-x-6">
-            <a href="#" class="hover:underline"><i class="fas fa-home"></i></a>
-            <a href="#" class="hover:underline">Category</a>
+    <nav class="bg-pink-200 text-pink-600  py-3">
+        <div class="container mx-auto flex justify-center font-semibold space-x-6">
+            <a href="#" class="hover:underline "><i class="fas fa-home"></i></a>
+            <a href="#" class="hover:underline ">Category</a>
             <a href="#" class="hover:underline">Blog</a>
             <a href="#" class="hover:underline">Fruits</a>
             <a href="#" class="hover:underline">Fish</a>
@@ -89,9 +96,9 @@
     <main class="container mx-auto py-8">
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
             <!-- Sample Pins (Replace with your own content) -->
-			<div class="bg-white shadow-md rounded-lg p-4 ">
-                <img src="https://via.placeholder.com/200" alt="Sample Photo" class="w-full rounded-lg transform transition-transform hover:scale-90">
-				<p class="mt-2 text-gray-700">Pin description lorem </p>
+			<div class="bg-white shadow-md rounded-lg p-1">
+                <img src="https://via.placeholder.com/200" alt="Sample Photo" class="w-full rounded-sm transform transition-transform hover:scale-90">
+                <p class="mt-0 text-gray-700 text-center text-sm">Custard apple - <span class="font-bengali">সরিফা ফল </span></p>
             </div>
 			<div class="bg-white shadow-md rounded-lg p-4">
                 <img src="https://via.placeholder.com/100x100" alt="Pin" class="w-full rounded-lg">
@@ -146,21 +153,22 @@
     </main>
 
     <script>
-        // JavaScript to toggle the fixed navigation bar on scroll
+        // JavaScript to toggle the fixed header on scroll
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
-            const nav = document.querySelector('nav');
-            const mainContent = document.querySelector('.main-content-with-margin');
-
+            const mainContent = document.querySelector('main');
+    
             if (window.scrollY > header.offsetHeight) {
-                nav.classList.add('fixed-nav');
+                header.classList.add('fixed-header'); // Add a class for the fixed header
                 mainContent.classList.add('main-content-with-margin');
             } else {
-                nav.classList.remove('fixed-nav');
+                header.classList.remove('fixed-header'); // Remove the class for the fixed header
                 mainContent.classList.remove('main-content-with-margin');
             }
         });
     </script>
+    
+
 	<script>
         // JavaScript to toggle the clear button in the search input
         const searchInput = document.getElementById('search-input');

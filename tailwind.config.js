@@ -19,7 +19,9 @@ module.exports = {
       fontFamily:{
         'borel' :['Borel'], 
         'roboto' :['Roboto'], 
-        'openSans' :['Open+Sans'], 
+        'openSans' :['Open+Sans'],
+        'bengali' :['Noto Serif Bengali'],
+
       }
     },
 
